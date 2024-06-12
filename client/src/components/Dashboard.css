@@ -1,0 +1,104 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 84%;
+}
+
+.v-row {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin: -12px; */
+  flex: 1 1 auto;
+}
+
+.v-col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 12px;
+}
+
+.v-col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  /* max-height: 70%; */
+  padding: 12px;
+}
+
+.v-col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.v-card {
+  display: block;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  position: relative;
+  padding: 0;
+  text-decoration: none;
+  transition-duration: 0.28s;
+  transition-property: box-shadow, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+  border-color: gray;
+  border-width: 0;
+  border-radius: 6px;
+}
+
+.v-card--variant-elevated {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background: rgba(255, 255, 255);
+  color: rgba(47, 43, 61, 0.7);
+}
+
+.v-card-item__content {
+  text-align: left;
+}
+
+.v-card-item {
+  display: grid;
+  align-items: center;
+  padding: 24px;
+}
+
+.v-card-title {
+  color: #000;
+}
+
+.v-card-text {
+  padding: 24px;
+  font-weight: 400;
+}
+
+.chart-container {
+  margin: 20px;
+  max-width: 50%;
+  max-height: 300px;
+  position: relative;
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1450px) {
+  .dashboard {
+    width: 82%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .dashboard {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .dashboard {
+    width: 100%;
+  }
+}

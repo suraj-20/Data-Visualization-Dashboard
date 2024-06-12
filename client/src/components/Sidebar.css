@@ -1,0 +1,126 @@
+.sidebar {
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  z-index: 1003;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  /* border-right: 1px solid #e0e0e0; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  overflow: scroll;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.sidebar.open {
+  left: 0; /* Slide in sidebar */
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+
+.sidebar-logo img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.sidebar-header h1 {
+  font-size: 20px;
+  color: #000;
+  margin: 0;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  padding: 10px 0px;
+}
+
+.sidebar-menu li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  gap: 1rem;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+}
+
+.sidebar-menu li:hover {
+  background-color: #f0f0f0;
+  border-radius: 7px;
+}
+
+.menu-title {
+  font-size: 14px;
+  color: #999;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.badge {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.close-button {
+  display: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f0f0f0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f0f0f0;
+}
+
+@media screen and (max-width: 1200px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    transition: left 0.3s;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .close-button {
+    display: block;
+    position: relative;
+    left: 70px;
+    top: 3px;
+    cursor: pointer;
+  }
+}
