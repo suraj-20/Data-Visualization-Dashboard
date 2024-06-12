@@ -8,7 +8,7 @@ const { connectMongoDb } = require("./config/MongoDb");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-connectMongoDb("mongodb://127.0.0.1:27017/data-visualization");
+connectMongoDb(process.env.MONGO_URL);
 
 app.use(bodyParser.json());
 app.use(cors());
