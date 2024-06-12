@@ -21,8 +21,19 @@ const Dashboard = ({ isOpen, handleToggle }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get("http://localhost:3000/api/data");
-      setData(res.data);
+      try {
+        console.log(process.env.REACT_APP_BASE_URL);
+        const response = await fetch(
+          `${process.env.REACT_APP_BASE_URL}/api/data`
+        );
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        setData(data);
+      } catch (error) {
+        console.error("Fetch error:", error);
+      }
     };
 
     fetchData();
@@ -318,7 +329,9 @@ const Dashboard = ({ isOpen, handleToggle }) => {
             <div className="v-card v-theme--light v-card--density-default v-card--variant-elevated">
               <div className="v-card-item">
                 <div className="v-card-item__content">
-                  <h4 className="v-card-title">Number of Events by Intencity</h4>
+                  <h4 className="v-card-title">
+                    Number of Events by Intencity
+                  </h4>
                 </div>
               </div>
               <div className="v-card-text">
