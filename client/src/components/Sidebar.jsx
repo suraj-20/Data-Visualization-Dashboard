@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import "./Sidebar.css";
-import logo from "../assets/svg+xml;base64,PHN2ZyB3aWR0aD0iMzUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAzNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wLjAw.svg";
+import logo from "../assets/log.svg"
 
 const Sidebar = forwardRef(({ isOpen, handleToggle }, ref) => {
   return (
